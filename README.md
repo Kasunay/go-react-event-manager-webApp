@@ -41,6 +41,7 @@ Each event has a dedicated page providing all necessary information for attendee
     About & Location Tabs: Provides detailed descriptions of the event and its precise location. For instance, the "Lodz Street Food Carnival" page mentions "Over 50 food trucks offering gourmet street food from around the world. Vegan and gluten-free options available."
 
     Social Sharing: Options to share the event with others.
+<img width="937" height="747" alt="Ekran görüntüsü 2025-07-15 131330" src="https://github.com/user-attachments/assets/b2ac9c0b-f7e5-419b-8993-e6dc5b845f87" />
 
 4. Personalized "My Tickets" Section
 
