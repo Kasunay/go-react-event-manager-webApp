@@ -65,7 +65,7 @@ The platform features a clean and intuitive header with quick access to:
 
     Sign In/Sign Up: Seamless user authentication.
 
-Technologies Used (Assumed)
+Technologies Used 
 
 (This section is speculative based on common web development practices. You'd fill this in with your actual tech stack.)
 
