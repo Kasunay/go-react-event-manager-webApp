@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your TickVibe Tickets</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 20px;
+            color: #334155;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+            padding: 30px;
+            text-align: center;
+            color: #000;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .event-info {
+            background-color: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .ticket {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            margin: 15px 0;
+            padding: 20px;
+            background-color: #fff;
+        }
+        .ticket-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .qr-code {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .qr-code img {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 10px;
+            background: white;
+        }
+        .important-info {
+            background-color: #fef3c7;
+            border: 1px solid #fbbf24;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .footer {
+            background-color: #f8fafc;
+            padding: 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🎫 TickVibe</div>
+            <h1>Your Tickets Are Ready!</h1>
+        </div>
+        
+        <div class="content">
+            <h2>Thank you for your purchase!</h2>
+            <p>Your tickets for <strong>{{.EventTitle}}</strong> have been confirmed and are ready to use.</p>
+            
+            <div class="event-info">
+                <h3>Event Details</h3>
+                <p><strong>📅 Date & Time:</strong> {{.EventDateTime}}</p>
+                <p><strong>📍 Location:</strong> {{.EventLocation}}</p>
+                <p><strong>🎫 Total Tickets:</strong> {{.TotalTickets}}</p>
+                <p><strong>💰 Total Paid:</strong> {{.TotalAmount}}</p>
+            </div>
+            
+            <h3>Your Tickets</h3>
+            {{range .Tickets}}
+            <div class="ticket">
+                <div class="ticket-header">
+                    <div>
+                        <h4>Ticket #{{.Index}}</h4>
+                        <p><strong>ID:</strong> {{.ID}}</p>
+                        <p><strong>Type:</strong> {{.TypeName}}</p>
+                    </div>
+                </div>
+                
+                <div class="qr-code">
+                    <img src="data:image/png;base64,{{.QRCode}}" alt="QR Code for Ticket {{.ID}}" width="150" height="150">
+                    <p><small>Present this QR code at the venue entrance</small></p>
+                </div>
+            </div>
+            {{end}}
+            
+            <div class="important-info">
+                <h4>⚠️ Important Information</h4>
+                <ul>
+                    <li>Keep this email safe - it contains your entry tickets</li>
+                    <li>Arrive at the venue at least 30 minutes before the event</li>
+                    <li>Present the QR codes on your phone or print them out</li>
+                    <li>Each QR code can only be used once</li>
+                    <li>Contact support if you have any issues: support@tickvibe.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 TickVibe. All rights reserved.</p>
+            <p>This email contains your event tickets. Please keep it safe.</p>
+        </div>
+    </div>
+</body>
+</html>
