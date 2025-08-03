@@ -2,6 +2,8 @@ Eventix
 
 Eventix is a comprehensive event discovery and ticketing platform designed to connect users with a wide range of experiences, from cultural festivals and music concerts to educational workshops and sports events. Our goal is to make finding and attending your next favorite event as seamless and enjoyable as possible.
 
+It is a full-stack e-ticketing platform developed as a part of my Bachelor’s degree project.
+
 Features
 
 1. Intuitive Event Discovery
