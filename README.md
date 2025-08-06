@@ -70,7 +70,6 @@ The platform features a clean and intuitive header with quick access to:
 
 Technologies Used 
 
-(This section is speculative based on common web development practices. You'd fill this in with your actual tech stack.)
 
     Frontend: React, TypeScript, V0, ShadcnUI,
 
